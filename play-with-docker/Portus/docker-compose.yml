@@ -36,7 +36,7 @@ services:
       MYSQL_ROOT_PASSWORD: portus
 
   registry:
-    image: library/registry:2.3.1
+    image: registry:2
     environment:
       - REGISTRY_AUTH_TOKEN_REALM=http://${EXTERNAL_IP}:3000/v2/token
       - REGISTRY_AUTH_TOKEN_SERVICE=${EXTERNAL_IP}:${REGISTRY_PORT}
